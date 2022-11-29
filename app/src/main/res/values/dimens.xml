@@ -1,0 +1,173 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="margin_min">8dp</dimen>
+    <dimen name="margin_max">24dp</dimen>
+    <dimen name="text_margin">8dp</dimen>
+    <dimen name="spacing_mlarge">40dp</dimen>
+    <dimen name="content_inset_1">1dp</dimen>
+    <dimen name="content_inset_51">25dp</dimen>
+    <dimen name="content_marginBotton">25dp</dimen>
+    <dimen name="content_inset_small">5dp</dimen>
+    <dimen name="normalTextSize">25sp</dimen>
+    <dimen name="width_line">65sp</dimen>
+    <dimen name="width_line_110">110sp</dimen>
+
+    <dimen name="size_text_s">12sp</dimen>
+
+    <!-- INI - DECLARACION DE EQUIPAJE -->
+    <!-- Espacios -->
+    <!-- HAB -->
+    <dimen name="content_inset_0">0dp</dimen>
+    <dimen name="content_inset_3">3dp</dimen>
+    <dimen name="content_inset_7">7dp</dimen>
+    <dimen name="content_inset_12">12dp</dimen>
+    <dimen name="content_inset_16">16dp</dimen>
+    <dimen name="content_inset_17">17dp</dimen>
+    <dimen name="content_inset_18">18dp</dimen>
+    <dimen name="content_inset_40">40dp</dimen>
+    <dimen name="content_inset_48">48dp</dimen>
+    <dimen name="content_inset_50">50dp</dimen>
+    <dimen name="content_inset_56">56dp</dimen>
+    <dimen name="content_inset_133">133dp</dimen>
+    <dimen name="content_inset_172">172dp</dimen>
+    <dimen name="content_inset_280">280dp</dimen>
+
+    <!--SVA -->
+    <dimen name="content_inset_2">2dp</dimen>
+    <dimen name="content_inset_5">5dp</dimen>
+    <dimen name="content_inset_8">8dp</dimen>
+    <dimen name="content_inset_10">10dp</dimen>
+    <dimen name="content_inset_15">15dp</dimen>
+    <dimen name="content_inset_20">20dp</dimen>
+    <dimen name="content_inset_24">24dp</dimen>
+    <dimen name="content_inset_25">25dp</dimen>
+    <dimen name="content_inset_26">26dp</dimen>
+    <dimen name="content_inset_30">30dp</dimen>
+    <dimen name="content_inset_32">32dp</dimen>
+    <dimen name="content_inset_35">35dp</dimen>
+    <dimen name="content_inset_36">36dp</dimen>
+    <dimen name="content_inset_45">45dp</dimen>
+    <dimen name="content_inset_60">60dp</dimen>
+    <dimen name="content_inset_80">80dp</dimen>
+    <dimen name="content_inset_90">90dp</dimen>
+    <dimen name="content_inset_100">100dp</dimen>
+    <dimen name="content_inset_110">110dp</dimen>
+    <dimen name="content_inset_120">120dp</dimen>
+    <dimen name="content_inset_130">130dp</dimen>
+    <dimen name="content_inset_150">150dp</dimen>
+
+    <!--ERP -->
+    <dimen name="content_inset_4">4dp</dimen>
+    <dimen name="content_inset_38">38dp</dimen>
+    <dimen name="content_inset_46">46dp</dimen>
+    <dimen name="content_inset_53">53dp</dimen>
+    <dimen name="content_inset_58">58dp</dimen>
+    <dimen name="content_inset_65">65dp</dimen>
+    <dimen name="content_inset_70">70dp</dimen>
+    <dimen name="content_inset_91">91dp</dimen>
+    <dimen name="content_inset_156">156dp</dimen>
+    <dimen name="content_inset_175">175dp</dimen>
+    <dimen name="content_inset_205">205dp</dimen>
+    <dimen name="content_inset_234">234dp</dimen>
+    <dimen name="content_inset_292">292dp</dimen>
+    <dimen name="content_inset_398">398dp</dimen>
+    <dimen name="content_inset_409">409dp</dimen>
+
+    <!--ACHS -->
+    <dimen name="content_inset_9">9dp</dimen>
+    <dimen name="content_inset_6">6dp</dimen>
+    <dimen name="content_inset_11">11dp</dimen>
+    <dimen name="content_inset_13">13dp</dimen>
+    <dimen name="content_inset_27">27dp</dimen>
+    <dimen name="content_inset_28">28dp</dimen>
+    <dimen name="content_inset_29">29dp</dimen>
+    <dimen name="content_inset_31">31dp</dimen>
+    <dimen name="content_inset_33">33dp</dimen>
+    <dimen name="content_inset_34">34dp</dimen>
+    <dimen name="content_inset_39">39dp</dimen>
+    <dimen name="content_inset_42">42dp</dimen>
+    <dimen name="content_inset_43">43dp</dimen>
+    <dimen name="content_inset_44">44dp</dimen>
+    <dimen name="content_inset_49">49dp</dimen>
+    <dimen name="content_height_51">51dp</dimen>
+    <dimen name="content_inset_54">54dp</dimen>
+    <dimen name="content_inset_57">57dp</dimen>
+    <dimen name="content_inset_59">59dp</dimen>
+    <dimen name="content_inset_68">68dp</dimen>
+    <dimen name="content_inset_85">85dp</dimen>
+    <dimen name="content_inset_99">99dp</dimen>
+    <dimen name="content_inset_106">106dp</dimen>
+    <dimen name="content_inset_124">124dp</dimen>
+    <dimen name="content_inset_138">138dp</dimen>
+    <dimen name="content_inset_142">142dp</dimen>
+    <dimen name="content_inset_210">210dp</dimen>
+    <dimen name="content_inset_220">220dp</dimen>
+    <dimen name="content_inset_226">226dp</dimen>
+    <dimen name="content_inset_230">230dp</dimen>
+    <dimen name="content_inset_270">270dp</dimen>
+    <dimen name="content_inset_279">279dp</dimen>
+    <dimen name="content_inset_290">290dp</dimen>
+    <dimen name="content_inset_300">300dp</dimen>
+    <dimen name="content_inset_320">320dp</dimen>
+    <dimen name="content_inset_337">337dp</dimen>
+    <dimen name="content_inset_350">350dp</dimen>
+    <dimen name="content_inset_389">389dp</dimen>
+    <dimen name="content_inset_392">392dp</dimen>
+    <dimen name="content_inset_400">400dp</dimen>
+    <dimen name="content_inset_410">410dp</dimen>
+    <dimen name="content_inset_620">620dp</dimen>
+
+
+    <!-- Tamanio-->
+    <!-- HAB -->
+    <dimen name="text_space">5sp</dimen>
+    <dimen name="textSize_12">12sp</dimen>
+    <dimen name="text_size_title_1">20sp</dimen>
+
+    <!--SVA -->
+    <dimen name="textSize_11">11sp</dimen>
+    <dimen name="textSize_13">13sp</dimen>
+    <dimen name="textSize_14">14sp</dimen>
+    <dimen name="textSize_16">16sp</dimen>
+    <dimen name="textSize_17">17sp</dimen>
+    <dimen name="textSize_18">18sp</dimen>
+    <dimen name="textSize_25">25sp</dimen>
+
+    <!--ACHS -->
+    <dimen name="textSize_20">20sp</dimen>
+    <dimen name="content_inset_140">140dp</dimen>
+    <dimen name="content_inset_73">73dp</dimen>
+
+    <dimen name="material_separation_two">16dp</dimen>
+    <dimen name="material_separation_text_fields_two">32dp</dimen>
+    <dimen name="material_separation_text_fields">16dp</dimen>
+    <dimen name="material_separation">8dp</dimen>
+
+    <!--Material design dimensions-->
+    <dimen name="material_separation_text">8dp</dimen>
+    <dimen name="textSize_15">15sp</dimen>
+
+    <integer name="singleLine">1</integer>
+
+    <!--genaral spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <!--dimen name="spacing_mlarge">20dp</dimen-->
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <!--dimen name="text_margin">16dp</dimen-->
+
+
+    <dimen name="dimens_graf_12">12dp</dimen>
+
+</resources>
