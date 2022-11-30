@@ -1,6 +1,8 @@
 package com.projects.comercialcarlos.service;
 
-public interface FragmentService {
+import android.os.Bundle;
 
+public interface FragmentService {
+        void verMenuInicial(Bundle bundle);
 }
 

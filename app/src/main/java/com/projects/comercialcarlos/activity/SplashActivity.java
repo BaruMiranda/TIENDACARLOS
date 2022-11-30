@@ -1,10 +1,13 @@
-package com.projects.comercialcarlos;
+package com.projects.comercialcarlos.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+
+import com.projects.comercialcarlos.R;
+import com.projects.comercialcarlos.activity.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
 

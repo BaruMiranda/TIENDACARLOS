@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtomAlert">
+        <item name="background">@color/colorBlack</item>
+
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background_header</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ToolbarText" parent="@style/Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Login">
+    <item name="android:colorControlActivated">@color/colorBlack</item>
+    <item name="boxStrokeColor">@color/colorBlack</item>
+    <item name="hintTextColor">@color/colorBlack</item>
+    <item name="colorPrimary">@color/colorBlack</item>
+    <item name="colorAccent">@color/colorBlack</item>
+
+    <item name="android:textSize">13dp</item>
+    <item name="android:labelTextSize">15dp</item>
+    <item name="android:textColorHint">@color/colorBlack</item>
+    <item name="colorControlActivated">@color/colorBlack</item>
+    <item name="colorControlNormal">@color/colorBlack</item>
+    <item name="colorControlHighlight">@color/colorBlack</item>
+    <item name="endIconTint">@color/colorBlack</item>
+
+    </style>
+
+
+</resources>
