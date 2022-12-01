@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".usuarios.BandejaFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/content_inset_20"
+        android:elevation="@dimen/content_inset_20"
+        app:cardCornerRadius="@dimen/content_inset_20">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_prendas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/content_inset_15"/>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

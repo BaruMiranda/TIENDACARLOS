@@ -5,15 +5,19 @@
         <item
             android:id="@+id/nav_registro"
             android:icon="@drawable/ic_home"
-                android:title="Registro" />
+                android:title="Almacen" />
         <item
             android:id="@+id/nav_registroPasajeros"
             android:icon="@drawable/ic_home"
-            android:title="Registro Manifiesto pasajeros" />
+            android:title="Provedores" />
         <item
             android:id="@+id/nav_tipocontrol"
             android:icon="@drawable/ic_home"
-            android:title="Cambio de tipo control" />
+            android:title="Clientes" />
+        <item
+            android:id="@+id/nav_reportes"
+            android:icon="@drawable/ic_home"
+            android:title="Reportes" />
     </group>
 
     <item android:title="Otros">

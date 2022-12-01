@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline6"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_5"
+            android:layout_marginBottom="@dimen/content_inset_5"
+            android:background="#F2F2F2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_NumerodeCCMN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/content_inset_10"
+                android:layout_marginStart="@dimen/content_inset_10"
+                android:fontFamily="@font/helvetica_bold"
+                android:text="181-0205-2021-000126"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textSize_13" />
+
+            <TextView
+                android:id="@+id/tv_placa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_10"
+                android:layout_marginTop="@dimen/content_inset_5"
+                android:text="PE-ABC123 / PE-ABC123 "
+                android:textSize="@dimen/textSize_13"
+                android:textColor="@color/colorBlack" />
+
+
+            <TextView
+                android:id="@+id/tv_fecHor_registro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_inset_10"
+                android:layout_marginBottom="@dimen/content_inset_10"
+                android:layout_marginTop="4dp"
+                android:text="04/01/2021 20:22    T. Traslado: 2h"
+                android:textSize="@dimen/textSize_13" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/id_star"
+        android:layout_width="@dimen/content_inset_30"
+        android:layout_height="@dimen/content_inset_30"
+        android:src="@drawable/ic_dow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/id_star_up"
+        android:layout_width="@dimen/content_inset_30"
+        android:layout_height="@dimen/content_inset_30"
+        android:src="@drawable/ic_dow_up"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.18" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="false"
+        app:fabCustomSize="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_flecha"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_count"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_south" />
+
+    <View
+        android:id="@+id/v_barra"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_count"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.92" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

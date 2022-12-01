@@ -18,6 +18,7 @@ import com.projects.comercialcarlos.databinding.ActivityMainBinding;
 import com.projects.comercialcarlos.databinding.ToolbarBinding;
 import com.projects.comercialcarlos.fragment.MenuFragment;
 import com.projects.comercialcarlos.service.FragmentService;
+import com.projects.comercialcarlos.usuarios.BandejaFragment;
 import com.projects.comercialcarlos.util.Constantes;
 
 public class MainActivity extends AppCompatActivity implements FragmentService {
@@ -87,6 +88,15 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
         MenuFragment showFragment = MenuFragment.newInstance(bundle);
         showFragment(showFragment);
         this.navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verBandejaFragment() {
+        BandejaFragment showFragment = BandejaFragment.newInstance();
+        showFragment(showFragment);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     private void showFragment(Fragment fragment) {
@@ -159,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
             case R.id.nav_tipocontrol:
                 break;
             case R.id.nav_sign_out:
-
+                this.verMenuInicial(bundle);
                 break;
         }
     }
@@ -180,6 +190,13 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
         binding.toolbar.textTitle.setVisibility(View.VISIBLE);
         binding.toolbar.textTitle.setText(titulo);
         binding.toolbar.imgSunat.setOnClickListener(v -> eventBack(bundle));
+    }
+
+    public void iniViewToolBarMenu(String titulo) {
+        binding.toolbar.imgSunat.setImageResource(R.drawable.ic_back_big);
+        binding.toolbar.imgSunat.setVisibility(View.GONE);
+        binding.toolbar.textTitle.setVisibility(View.VISIBLE);
+        binding.toolbar.textTitle.setText(titulo);
     }
 
     @Override

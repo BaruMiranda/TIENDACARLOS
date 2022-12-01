@@ -1,6 +1,8 @@
 package com.projects.comercialcarlos.fragment;
 
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,6 +47,7 @@ public class MenuFragment extends Fragment {
         super.onCreate(savedInstanceState);
         ((MainActivity) getActivity()).getToolbar().toolbarMenu.setTitle("Bienvenido");
     }
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
 
@@ -81,12 +87,71 @@ public class MenuFragment extends Fragment {
     }
 
     private void regionSetup() {
+
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                if(isValidationUser()&&isValidationPass()){
+                    ((InputMethodManager)getActivity().getSystemService(requireActivity().INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(view.getWindowToken(),0);
+                    ((MainActivity) getActivity()).verBandejaFragment();
+                }
             }
         });
+    }
+
+    public Boolean isValidationUser() {
+        if (!validationUser()) {
+            dialog("Debe ingresar un usuario valido.");
+            return false;
+        }
+        return true;
+    }
+
+    public Boolean isValidationPass() {
+        if (!validationPass()) {
+            dialog("Debe ingresar una contraseña valida.");
+            return false;
+        }
+        return true;
+    }
+
+    Boolean validationUser() {
+        String user = binding.etEmailAuth.getText().toString();
+        if (!user.isEmpty())
+            return true;
+
+        return false;
+    }
+    Boolean validationPass() {
+        String password = binding.etPasswordAuth.getText().toString();
+        if (!password.isEmpty())
+            return true;
+
+        return false;
+    }
+
+    public Dialog dialog(String mensaje){
+        final Dialog dialog = new Dialog(requireContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dialog_validation);
+        dialog.setCancelable(true);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        ((TextView) (dialog.findViewById(R.id.tvMessage))).setText(mensaje);
+
+        (dialog.findViewById(R.id.btnAceptarValidacion)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
+
+        return dialog;
     }
 
 }
