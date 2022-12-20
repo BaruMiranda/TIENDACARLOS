@@ -23,11 +23,6 @@ import com.projects.comercialcarlos.R;
 import com.projects.comercialcarlos.activity.MainActivity;
 import com.projects.comercialcarlos.databinding.FragmentMenuBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link MenuFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class MenuFragment extends Fragment {
 
     private FragmentMenuBinding binding;

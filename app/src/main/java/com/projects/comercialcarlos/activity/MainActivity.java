@@ -18,7 +18,14 @@ import com.projects.comercialcarlos.databinding.ActivityMainBinding;
 import com.projects.comercialcarlos.databinding.ToolbarBinding;
 import com.projects.comercialcarlos.fragment.MenuFragment;
 import com.projects.comercialcarlos.service.FragmentService;
+import com.projects.comercialcarlos.usuarios.AlmacenFragment;
 import com.projects.comercialcarlos.usuarios.BandejaFragment;
+import com.projects.comercialcarlos.usuarios.ClientesFragment;
+import com.projects.comercialcarlos.usuarios.EmpleadoFragment;
+import com.projects.comercialcarlos.usuarios.EmpresaTCFragment;
+import com.projects.comercialcarlos.usuarios.ProveedoresFragment;
+import com.projects.comercialcarlos.usuarios.ReportesFragment;
+import com.projects.comercialcarlos.usuarios.VentasFragment;
 import com.projects.comercialcarlos.util.Constantes;
 
 public class MainActivity extends AppCompatActivity implements FragmentService {
@@ -88,6 +95,55 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
         MenuFragment showFragment = MenuFragment.newInstance(bundle);
         showFragment(showFragment);
         this.navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verVentasFragment() {
+        VentasFragment showFragment = VentasFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verClientesFragment() {
+        ClientesFragment showFragment = ClientesFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verAlmacenFragment() {
+        AlmacenFragment showFragment = AlmacenFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verEmpleadoFragment() {
+        EmpleadoFragment showFragment = EmpleadoFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verProveedoresFragment() {
+        ProveedoresFragment showFragment = ProveedoresFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verEmpresaTCFragment() {
+        EmpresaTCFragment showFragment = EmpresaTCFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
+    }
+
+    @Override
+    public void verReportesFragment() {
+        ReportesFragment showFragment = ReportesFragment.newInstance();
+        showFragment(showFragment);
+        navigationViewToolBar_setVisibility(false);
     }
 
     @Override
@@ -163,10 +219,16 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
         Bundle bundle = new Bundle();
         switch (viewId) {
             case R.id.nav_registro:
+                this.verVentasFragment();
                 break;
             case R.id.nav_registroPasajeros:
+                this.verProveedoresFragment();
                 break;
             case R.id.nav_tipocontrol:
+                this.verClientesFragment();
+                break;
+            case R.id.nav_reportes:
+                this.verReportesFragment();
                 break;
             case R.id.nav_sign_out:
                 this.verMenuInicial(bundle);
@@ -209,5 +271,13 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
 
         getSupportFragmentManager().executePendingTransactions();
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.main_fragment_placeholder);
+        if (currentFragment instanceof VentasFragment ||
+                currentFragment instanceof ClientesFragment ||
+                currentFragment instanceof AlmacenFragment ||
+                currentFragment instanceof EmpleadoFragment ||
+                currentFragment instanceof ProveedoresFragment ||
+                currentFragment instanceof EmpresaTCFragment) {
+            this.verBandejaFragment();
+        }
     }
 }

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/content_inset_10"
+    android:orientation="vertical"
+    tools:context=".usuarios.EmpresaTCFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/dpm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Numero de Ruc" />
+
+                <TextView
+                    android:id="@+id/cod_numeroCCMNDPMN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_10"
+                    android:text="20124587458" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cod_datosGenerales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_star_drop"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center_vertical"
+            android:padding="@dimen/content_inset_5"
+            android:text="Datos Generales"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/lldatosgenerales"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content_inset_10"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Origen (Dis./Prov./Dpto):" />
+
+            <TextView
+                android:id="@+id/tv_origen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_inset_10"
+                android:text="210101 La Libertad - Chepen - Chepen" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Direccion " />
+
+                    <TextView
+                        android:id="@+id/tv_aduana"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_inset_10"
+                        android:text="Calle San Pedro 404" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Empresa" />
+
+                    <TextView
+                        android:id="@+id/tv_puestoControl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tienda Carlos" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cod_empresaTrasporte"
+            app:drawableRightCompat="@drawable/ic_arrow_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_10"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center_vertical"
+            android:padding="@dimen/content_inset_5"
+            android:text="Datos de la Emp. Tienda Carlos"
+            android:textColor="@color/colorWhite" />
+
+
+        <LinearLayout
+            android:id="@+id/lldatosEmpresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content_inset_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ruc / Codigo" />
+
+                    <TextView
+                        android:id="@+id/tv_ruc_codigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/content_inset_10"
+                        android:text="20124587458" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo" />
+
+                    <TextView
+                        android:id="@+id/tv_tipo_flujo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tienda Ropa" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Razon social" />
+
+            <TextView
+                android:id="@+id/tv_name_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_inset_10"
+                android:text="TIENDA CARLOS XYZ S.A.C." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_inset_10"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pais" />
+
+                    <TextView
+                        android:id="@+id/tv_pais_placa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PE-Peru" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Provincia" />
+
+                    <TextView
+                        android:id="@+id/tv_placa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chepen" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/cod_datosConductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/content_inset_5"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_arrow_right"
+            android:fontFamily="@font/helvetica_bold"
+            android:gravity="center_vertical"
+            android:padding="@dimen/content_inset_5"
+            android:text="Datos Empleados"
+            android:textColor="@color/colorWhite" />
+
+        <LinearLayout
+            android:id="@+id/lldatosConductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/content_inset_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/style_linnear"
+                android:padding="@dimen/content_inset_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nacionalidad" />
+
+            <TextView
+                android:id="@+id/tv_nacionalidad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PE-Peru" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo documento identidad" />
+
+            <TextView
+                android:id="@+id/tv_dni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DNI" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="N° documento identidad" />
+
+                    <TextView
+                        android:id="@+id/tv_nro_dni"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="18765676" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cargo" />
+
+                    <TextView
+                        android:id="@+id/tv_licencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Gerente" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apellidos y nombres" />
+
+            <TextView
+                android:id="@+id/tv_nombre_conductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_inset_10"
+                android:text="Bueno Fernando" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/content_inset_10"
+                android:background="@drawable/style_linnear"
+                android:padding="@dimen/content_inset_10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nacionalidad" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PE-Peru" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo documento identidad" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DNI" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="N° documento identidad" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="98675432" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Cargo" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Administrador" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apellidos y nombres" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/content_inset_10"
+                    android:text="Garcia Gastelo Anthony" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
