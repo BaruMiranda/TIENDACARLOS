@@ -123,7 +123,7 @@
             app:drawableRightCompat="@drawable/ic_arrow_right"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/content_inset_10"
+            android:layout_marginTop="@dimen/content_inset_5"
             android:background="@color/colorPrimary"
             android:fontFamily="@font/helvetica_bold"
             android:gravity="center_vertical"

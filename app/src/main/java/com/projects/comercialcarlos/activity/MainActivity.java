@@ -276,7 +276,8 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
                 currentFragment instanceof AlmacenFragment ||
                 currentFragment instanceof EmpleadoFragment ||
                 currentFragment instanceof ProveedoresFragment ||
-                currentFragment instanceof EmpresaTCFragment) {
+                currentFragment instanceof EmpresaTCFragment ||
+                currentFragment instanceof ReportesFragment) {
             this.verBandejaFragment();
         }
     }
