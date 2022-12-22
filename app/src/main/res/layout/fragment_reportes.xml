@@ -64,7 +64,7 @@ tools:context=".usuarios.ReportesFragment">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R"
+                    android:text=""
                     android:paddingLeft="10dp"/>
 
             </LinearLayout>
@@ -86,7 +86,7 @@ tools:context=".usuarios.ReportesFragment">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Python"
+                    android:text=""
                     android:paddingLeft="10dp"/>
 
             </LinearLayout>
@@ -108,7 +108,7 @@ tools:context=".usuarios.ReportesFragment">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="C++"
+                    android:text=""
                     android:paddingLeft="10dp"/>
 
             </LinearLayout>
@@ -130,7 +130,7 @@ tools:context=".usuarios.ReportesFragment">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Java"
+                    android:text=""
                     android:paddingLeft="10dp"/>
 
             </LinearLayout>
@@ -161,7 +161,7 @@ tools:context=".usuarios.ReportesFragment">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Use of Programming Languages(In Percentage):"
+            android:text="Rango de productos mas vendidos:"
             android:textSize="23sp"
             android:textStyle="bold"
             android:layout_marginLeft="25dp"
