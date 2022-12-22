@@ -9,13 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.projects.comercialcarlos.R;
 import com.projects.comercialcarlos.activity.MainActivity;
-import com.projects.comercialcarlos.databinding.FragmentAlmacenBinding;
 import com.projects.comercialcarlos.databinding.FragmentEmpleadoBinding;
-
-import retrofit2.http.GET;
-import retrofit2.http.Query;
 
 
 public class EmpleadoFragment extends Fragment {
