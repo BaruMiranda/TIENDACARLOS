@@ -20,6 +20,28 @@ public class Productos  {
      String inventariable;
      String perecedero;
 
+     public Productos() {
+     }
+
+     public Productos(String idproducto, String codigo_interno, String codigo_barra, String nombre_producto, String precio_compra, String precio_venta, String precio_venta_mayoreo, String stock, String stock_min, String idcategoria, String idmarca, String idpresentacion, String estado, String exento, String inventariable, String perecedero) {
+          this.idproducto = idproducto;
+          this.codigo_interno = codigo_interno;
+          this.codigo_barra = codigo_barra;
+          this.nombre_producto = nombre_producto;
+          this.precio_compra = precio_compra;
+          this.precio_venta = precio_venta;
+          this.precio_venta_mayoreo = precio_venta_mayoreo;
+          this.stock = stock;
+          this.stock_min = stock_min;
+          this.idcategoria = idcategoria;
+          this.idmarca = idmarca;
+          this.idpresentacion = idpresentacion;
+          this.estado = estado;
+          this.exento = exento;
+          this.inventariable = inventariable;
+          this.perecedero = perecedero;
+     }
+
      public String getIdproducto() {
           return idproducto;
      }

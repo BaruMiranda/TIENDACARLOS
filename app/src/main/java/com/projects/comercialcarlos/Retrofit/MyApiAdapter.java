@@ -14,7 +14,7 @@ public class MyApiAdapter {
     /**
      * Localhost IP for AVD emulators: 10.0.2.2
      */
-    private static final String BASE_URL = "http://127.0.0.1:80/microservicios/";
+    private static final String BASE_URL = "http://192.168.1.47:80/microservicios/";
 
     public static ApiProductosService getApiService() {
         // Creamos un interceptor y le indicamos el log level a usar

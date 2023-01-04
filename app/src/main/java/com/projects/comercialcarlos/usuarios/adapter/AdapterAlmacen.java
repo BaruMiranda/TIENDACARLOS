@@ -17,7 +17,7 @@ import java.util.List;
 
 public class AdapterAlmacen extends RecyclerView.Adapter<AdapterAlmacen.CPPViewHolder> {
 
-    private List<Productos> listaDatos = new ArrayList<>();
+    private List<Productos> listaDatos;
 
     public AdapterAlmacen(List<Productos> listaDatos) {
         this.listaDatos = listaDatos;
@@ -49,11 +49,13 @@ public class AdapterAlmacen extends RecyclerView.Adapter<AdapterAlmacen.CPPViewH
 
         TextView cod01;
         TextView cod02;
+        TextView cod03;
 
         public CPPViewHolder(@NonNull View itemView) {
             super(itemView);
             cod01 = itemView.findViewById(R.id.txtNumeroCartaPorte);
             cod02 = itemView.findViewById(R.id.txtDestino);
+            cod03 = itemView.findViewById(R.id.idProduct);
         }
 
         @SuppressLint("SetTextI18n")
@@ -61,6 +63,7 @@ public class AdapterAlmacen extends RecyclerView.Adapter<AdapterAlmacen.CPPViewH
 
             cod01.setText(datos.getNombre_producto());
             cod02.setText("Precio: " +  datos.getPrecio_venta());
+            cod03.setText(datos.getIdproducto());
         }
     }
 }
