@@ -25,7 +25,7 @@ public class EmpleadoFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentEmpleadoBinding.inflate(inflater, container, false);
         regionSetup();
-        ((MainActivity) getActivity()).iniView("Empleados -  Tienda Carlos");
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Empleados -  Tienda Carlos");
         return binding.getRoot();
     }
 

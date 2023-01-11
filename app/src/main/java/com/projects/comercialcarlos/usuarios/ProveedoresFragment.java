@@ -26,7 +26,7 @@ public class ProveedoresFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentProveedoresBinding.inflate(inflater, container, false);
         regionSetup();
-        ((MainActivity) getActivity()).iniView("Proveedores -  Tienda Carlos");
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Proveedores -  Tienda Carlos");
         return binding.getRoot();
     }
 

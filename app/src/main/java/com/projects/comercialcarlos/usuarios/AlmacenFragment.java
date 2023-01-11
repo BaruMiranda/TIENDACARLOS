@@ -17,8 +17,11 @@ import com.projects.comercialcarlos.Retrofit.model.Productos;
 import com.projects.comercialcarlos.activity.MainActivity;
 import com.projects.comercialcarlos.databinding.FragmentAlmacenBinding;
 import com.projects.comercialcarlos.usuarios.adapter.AdapterAlmacen;
+import com.projects.comercialcarlos.util.Constantes;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,6 +31,7 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
 
     private FragmentAlmacenBinding binding;
     AdapterAlmacen adapter;
+    Integer countCarga = 0;
 
     public static AlmacenFragment newInstance() {
         return new AlmacenFragment();
@@ -39,7 +43,11 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
         Call<ArrayList<Productos>> call = MyApiAdapter.getApiService().getProductos();
         call.enqueue(this);
         binding.productos.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
-        ((MainActivity) getActivity()).iniView("Almacen -  Tienda Carlos");
+        binding.tvVerMas.setOnClickListener(view -> {
+            loadMoreItemsCCMN();
+            binding.tvVerMas.setVisibility(View.GONE);
+        });
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Almacen -  Tienda Carlos");
         return binding.getRoot();
     }
 
@@ -65,17 +73,61 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
                 String exento = x.getExento();
                 String inventariable = x.getInventariable();
                 String perecedero = x.getPerecedero();
-                Productos prodcuto = new Productos(idproducto, codigo_interno, codigo_barra, nombre_producto, precio_compra, precio_venta, precio_venta_mayoreo, stock, stock_min, idcategoria, idmarca,idpresentacion,estado,exento,inventariable,perecedero);
+                Productos prodcuto = new Productos(idproducto, codigo_interno, codigo_barra, nombre_producto, precio_compra, precio_venta, precio_venta_mayoreo, stock, stock_min, idcategoria, idmarca, idpresentacion, estado, exento, inventariable, perecedero);
                 productos.add(prodcuto);
             });
-            adapter = new AdapterAlmacen(productos);
-            binding.productos.setAdapter(adapter);
+            setItemPDFCCMN(productos);
         }
     }
 
     @Override
     public void onFailure(Call<ArrayList<Productos>> call, Throwable t) {
 
+    }
+
+    private void setItemPDFCCMN(List<Productos> productos) {
+
+        Constantes.lstAdjuntoCargaCCMN = new ArrayList<>();
+
+        for (Productos adjunto : productos) {
+            if (countCarga < 3) {
+                Constantes.lstAdjuntoCargaCCMN.add(adjunto);
+            } else {
+                Constantes.lstAdjuntoCargaCCMNMas.add(adjunto);
+            }
+            countCarga++;
+        }
+        listaAdjuntosCCMN();
+    }
+
+    private void listaAdjuntosCCMN() {
+
+        Constantes.countCarga = countCarga;
+        if (Objects.nonNull(Constantes.lstAdjuntoCargaCCMNMas) && Constantes.lstAdjuntoCargaCCMNMas.size() > 0)
+            binding.tvVerMas.setVisibility(View.VISIBLE);
+        adapter = new AdapterAlmacen(Constantes.lstAdjuntoCargaCCMN, producto -> {
+            Toast.makeText(requireContext(), "aqui quiero mi info", Toast.LENGTH_LONG).show();
+        });
+        binding.productos.setHasFixedSize(true);
+        binding.productos.setAdapter(adapter);
+    }
+
+    private void loadMoreItemsCCMN() {
+        Constantes.lstAdjuntoCargaCCMN.add(null);
+        adapter.notifyItemInserted(Constantes.lstAdjuntoCargaCCMN.size() - 1);
+
+        if (Objects.nonNull(Constantes.lstAdjuntoCargaCCMNMas) && Constantes.lstAdjuntoCargaCCMNMas.size() > 0) {
+            Constantes.lstAdjuntoCargaCCMN.remove(Constantes.lstAdjuntoCargaCCMN.size() - 1);
+            int scrollPosition = Constantes.lstAdjuntoCargaCCMN.size();
+            adapter.notifyItemRemoved(scrollPosition);
+
+            for (Productos productosDpmn : Constantes.lstAdjuntoCargaCCMNMas) {
+                Constantes.lstAdjuntoCargaCCMN.add(productosDpmn);
+            }
+
+            Constantes.lstAdjuntoCargaCCMNMas = new ArrayList<>();
+            adapter.notifyDataSetChanged();
+        }
     }
 
 

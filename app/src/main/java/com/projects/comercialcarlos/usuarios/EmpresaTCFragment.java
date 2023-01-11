@@ -27,7 +27,7 @@ public class EmpresaTCFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentEmpresaTCBinding.inflate(inflater, container, false);
         regionSetup();
-        ((MainActivity) getActivity()).iniView("Tienda Carlos");
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Tienda Carlos");
         return binding.getRoot();
     }
 

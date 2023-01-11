@@ -101,49 +101,63 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
     public void verVentasFragment() {
         VentasFragment showFragment = VentasFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verClientesFragment() {
         ClientesFragment showFragment = ClientesFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verAlmacenFragment() {
         AlmacenFragment showFragment = AlmacenFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verEmpleadoFragment() {
         EmpleadoFragment showFragment = EmpleadoFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verProveedoresFragment() {
         ProveedoresFragment showFragment = ProveedoresFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verEmpresaTCFragment() {
         EmpresaTCFragment showFragment = EmpresaTCFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
     public void verReportesFragment() {
         ReportesFragment showFragment = ReportesFragment.newInstance();
         showFragment(showFragment);
-        navigationViewToolBar_setVisibility(false);
+        this.initToolbarHomeBandeja();
+        navigationViewToolBar_setVisibility(true);
+        this.initNavigationToolBar();
     }
 
     @Override
@@ -219,7 +233,7 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
         Bundle bundle = new Bundle();
         switch (viewId) {
             case R.id.nav_registro:
-                this.verVentasFragment();
+                this.verAlmacenFragment();
                 break;
             case R.id.nav_registroPasajeros:
                 this.verProveedoresFragment();
@@ -271,14 +285,5 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
 
         getSupportFragmentManager().executePendingTransactions();
         Fragment currentFragment = getSupportFragmentManager().findFragmentById(R.id.main_fragment_placeholder);
-        if (currentFragment instanceof VentasFragment ||
-                currentFragment instanceof ClientesFragment ||
-                currentFragment instanceof AlmacenFragment ||
-                currentFragment instanceof EmpleadoFragment ||
-                currentFragment instanceof ProveedoresFragment ||
-                currentFragment instanceof EmpresaTCFragment ||
-                currentFragment instanceof ReportesFragment) {
-            this.verBandejaFragment();
-        }
     }
 }

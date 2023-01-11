@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/content_inset_5"
     android:orientation="vertical"
     android:background="#F2F2F2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:padding="@dimen/content_inset_5"
         android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/idProduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/content_inset_10"
-                android:layout_marginTop="@dimen/content_inset_10"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="1"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/content_inset_16" />
-            <TextView
-                android:id="@+id/txtNumeroCartaPorte"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/content_inset_10"
-                android:layout_marginTop="@dimen/content_inset_10"
-                android:fontFamily="@font/helvetica_bold"
-                android:text="GRR-001-00000036"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/content_inset_16" />
-        </LinearLayout>
 
         <TextView
-            android:id="@+id/txtDestino"
+            android:id="@+id/numero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/content_inset_10"
-            android:layout_marginTop="@dimen/content_inset_10"
-            android:layout_marginBottom="@dimen/content_inset_10"
-            android:text="Destino: PUNO/ PUNO/ PUNO"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="GRR-001-00000036"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/content_inset_16" />
+        <TextView
+            android:id="@+id/producto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="GRR-001-00000036"
+            android:textSize="@dimen/content_inset_16" />
+        <TextView
+            android:id="@+id/precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="GRR-001-00000036"
             android:textSize="@dimen/content_inset_16" />
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/content_inset_10"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/id_star_control"
+            android:layout_width="@dimen/content_inset_40"
+            android:layout_height="@dimen/content_inset_40"
+            android:src="@drawable/ic_chevron_right"
+            app:tint="#004BA0" />
     </LinearLayout>
 
 

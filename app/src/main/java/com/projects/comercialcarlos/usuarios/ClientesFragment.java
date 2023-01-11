@@ -28,7 +28,7 @@ public class ClientesFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentClientesBinding.inflate(inflater, container, false);
         regionSetup();
-        ((MainActivity) getActivity()).iniView("Clientes -  Tienda Carlos");
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Clientes -  Tienda Carlos");
         return binding.getRoot();
     }
 

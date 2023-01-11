@@ -3,13 +3,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:weightSum="2"
+    android:layout_margin="@dimen/content_inset_10"
     android:orientation="vertical"
     tools:context=".usuarios.AlmacenFragment">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/productos"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/content_inset_20"/>
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/content_inset_5"
+                android:fontFamily="@font/helvetica_bold"
+                android:textColor="@color/colorBlack"
+                android:gravity="center"
+                android:text="Productos"
+                android:textSize="@dimen/textSize_20" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/productos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/content_inset_5"/>
+            <TextView
+                android:id="@+id/tvVerMas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/content_inset_5"
+                android:gravity="center"
+                android:padding="@dimen/content_inset_5"
+                android:text="Ver más"
+                android:textColor="@color/blue_700"
+                android:textSize="@dimen/textSize_16"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.1"
+                android:layout_marginBottom="@dimen/content_inset_5"
+                android:fontFamily="@font/helvetica_bold"
+                android:gravity="center"
+                android:text="Detalle Producto"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/textSize_20"  />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/inventario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:layout_margin="@dimen/content_inset_5"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

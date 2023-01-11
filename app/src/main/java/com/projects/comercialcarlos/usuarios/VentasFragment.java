@@ -26,7 +26,7 @@ public class VentasFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentVentasBinding.inflate(inflater, container, false);
         regionSetup();
-        ((MainActivity) getActivity()).iniView("Ventas -  Tienda Carlos");
+        ((MainActivity) getActivity()).iniViewToolBarMenu("Ventas -  Tienda Carlos");
         return binding.getRoot();
     }
 
