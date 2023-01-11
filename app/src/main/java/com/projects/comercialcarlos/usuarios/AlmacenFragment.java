@@ -13,24 +13,30 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.projects.comercialcarlos.Retrofit.MyApiAdapter;
+import com.projects.comercialcarlos.Retrofit.model.Inventarios;
 import com.projects.comercialcarlos.Retrofit.model.Productos;
 import com.projects.comercialcarlos.activity.MainActivity;
 import com.projects.comercialcarlos.databinding.FragmentAlmacenBinding;
 import com.projects.comercialcarlos.usuarios.adapter.AdapterAlmacen;
+import com.projects.comercialcarlos.usuarios.adapter.AdapterInventario;
 import com.projects.comercialcarlos.util.Constantes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AlmacenFragment extends Fragment implements Callback<ArrayList<Productos>> {
+public class AlmacenFragment extends Fragment implements Callback<ArrayList<Productos>>{
 
     private FragmentAlmacenBinding binding;
     AdapterAlmacen adapter;
+    AdapterInventario adapterInventario;
+    List<Inventarios> listInventarios;
     Integer countCarga = 0;
 
     public static AlmacenFragment newInstance() {
@@ -49,6 +55,17 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
         });
         ((MainActivity) getActivity()).iniViewToolBarMenu("Almacen -  Tienda Carlos");
         return binding.getRoot();
+    }
+
+    private void regionSetup(List<Inventarios> inventarios) {
+        binding.inventario.setLayoutManager(new LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false));
+        if (inventarios.size()!=0){
+            binding.detailGoneProduct.setVisibility(View.GONE);
+            binding.inventario.setVisibility(View.VISIBLE);
+            adapterInventario = new AdapterInventario(inventarios);
+            binding.inventario.setAdapter(adapterInventario);
+        }
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -85,6 +102,7 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void setItemPDFCCMN(List<Productos> productos) {
 
         Constantes.lstAdjuntoCargaCCMN = new ArrayList<>();
@@ -100,13 +118,15 @@ public class AlmacenFragment extends Fragment implements Callback<ArrayList<Prod
         listaAdjuntosCCMN();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void listaAdjuntosCCMN() {
 
         Constantes.countCarga = countCarga;
         if (Objects.nonNull(Constantes.lstAdjuntoCargaCCMNMas) && Constantes.lstAdjuntoCargaCCMNMas.size() > 0)
             binding.tvVerMas.setVisibility(View.VISIBLE);
         adapter = new AdapterAlmacen(Constantes.lstAdjuntoCargaCCMN, producto -> {
-            Toast.makeText(requireContext(), "aqui quiero mi info", Toast.LENGTH_LONG).show();
+            Constantes.newLstInventarios = Constantes.lstInventarios.stream().filter(x->x.getIdproducto().equals(producto.getIdproducto())).collect(Collectors.toList());
+            regionSetup(Constantes.newLstInventarios);
         });
         binding.productos.setHasFixedSize(true);
         binding.productos.setAdapter(adapter);

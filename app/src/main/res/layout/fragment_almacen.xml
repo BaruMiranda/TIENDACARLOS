@@ -76,8 +76,21 @@
                 android:id="@+id/inventario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_weight="0.9"
                 android:layout_margin="@dimen/content_inset_5"/>
+            <TextView
+                android:id="@+id/detailGoneProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginBottom="@dimen/content_inset_5"
+                android:gravity="center"
+                android:text="Seleccione un producto"
+                android:textColor="@color/bar_2"
+                android:textSize="@dimen/textSize_20"  />
         </LinearLayout>
     </LinearLayout>
 

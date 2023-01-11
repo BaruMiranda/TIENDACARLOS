@@ -1,5 +1,6 @@
 package com.projects.comercialcarlos.util;
 
+import com.projects.comercialcarlos.Retrofit.model.Inventarios;
 import com.projects.comercialcarlos.Retrofit.model.Productos;
 
 import java.util.ArrayList;
@@ -13,4 +14,7 @@ public class Constantes {
     public static List<Productos> lstAdjuntoCargaCCMN = new ArrayList<>();
     public static List<Productos> lstAdjuntoCargaCCMNMas = new ArrayList<>();
     public static Integer countCarga = 0;
+
+    public static List<Inventarios> lstInventarios = new ArrayList<>();
+    public static List<Inventarios> newLstInventarios = new ArrayList<>();
 }

@@ -74,7 +74,7 @@ public class AdapterAlmacen extends RecyclerView.Adapter<AdapterAlmacen.CPPViewH
 
             cod01.setText(datos.getNombre_producto());
             cod02.setText("Precio: " +  datos.getPrecio_venta());
-            cod03.setText(datos.getIdproducto());
+            cod03.setText("Stock: " +datos.getStock());
             tv_star.setOnClickListener(view -> mOnItemClickListener.onItemClick(datos));
         }
     }

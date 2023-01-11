@@ -1,8 +1,6 @@
 package com.projects.comercialcarlos.usuarios.adapter;
 
 import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,24 +12,23 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.projects.comercialcarlos.R;
-import com.projects.comercialcarlos.usuarios.modul.Producto;
+import com.projects.comercialcarlos.Retrofit.model.Productos;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Adapterbandeja extends RecyclerView.Adapter<Adapterbandeja.ADDPMNViewHolder> {
 
-    public List<Producto> listaDatos = new ArrayList<>();
+    public List<Productos> listaDatos = new ArrayList<>();
     final Adapterbandeja.OnItemClickListener mOnItemClickListener;
 
-    public Adapterbandeja(List<Producto> listaDatos, Adapterbandeja.OnItemClickListener mOnItemClickListener) {
+    public Adapterbandeja(List<Productos> listaDatos, Adapterbandeja.OnItemClickListener mOnItemClickListener) {
         this.listaDatos = listaDatos;
         this.mOnItemClickListener = mOnItemClickListener;
     }
 
     public interface OnItemClickListener {
-        void onItemClick(Producto listaPcisPorPlaca);
+        void onItemClick(Productos listaPcisPorPlaca);
     }
 
 
@@ -52,7 +49,7 @@ public class Adapterbandeja extends RecyclerView.Adapter<Adapterbandeja.ADDPMNVi
         return listaDatos.size();
     }
 
-    public void setItems(List<Producto> list) {
+    public void setItems(List<Productos> list) {
         this.listaDatos = list;
         notifyDataSetChanged();
     }
@@ -81,7 +78,7 @@ public class Adapterbandeja extends RecyclerView.Adapter<Adapterbandeja.ADDPMNVi
         }
 
         @SuppressLint("SetTextI18n")
-        public void asignarDatos(Producto datos, Integer i) {
+        public void asignarDatos(Productos datos, Integer i) {
             if (i == 0) {
 
                 iv_flecha.setVisibility(View.GONE);
