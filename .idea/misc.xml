@@ -9,10 +9,12 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/border_all.xml" value="0.278" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_arrow_right.xml" value="0.18" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_back_big.xml" value="0.278" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_chevron_right.xml" value="0.1645" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_dow.xml" value="0.2035" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_dow_up.xml" value="0.2035" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_home.xml" value="0.2035" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2035" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_phone.xml" value="0.1745" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_salir.xml" value="0.278" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_south.xml" value="0.2315" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/drawable/ic_star_drop.xml" value="0.18" />
@@ -21,11 +23,21 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/activity_main.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/activity_splash.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/dialog_validation.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_almacen.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_bandeja.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_clientes.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_empleado.xml" value="0.36822916666666666" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_empresa_t_c.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_inventarios.xml" value="0.35885416666666664" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_menu.xml" value="0.21203703703703702" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_proveedores.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_reporte_ventas.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_reportes.xml" value="0.35885416666666664" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/fragment_ventas.xml" value="0.20989583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/item_bandeja.xml" value="0.3723958333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/item_carta_porte.xml" value="0.3" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/item_inventario.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/item_proveedores.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/nav_header_main.xml" value="0.5" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/layout/toolbar.xml" value="0.3723958333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/TIENDACARLOS/app/src/main/res/menu/activity_main_drawer.xml" value="0.3723958333333333" />
