@@ -19,6 +19,7 @@ import com.projects.comercialcarlos.Retrofit.model.Proveedores;
 import com.projects.comercialcarlos.activity.MainActivity;
 import com.projects.comercialcarlos.databinding.FragmentEmpleadoBinding;
 import com.projects.comercialcarlos.databinding.FragmentProveedoresBinding;
+import com.projects.comercialcarlos.usuarios.adapter.AdapterProveedores;
 
 import java.util.ArrayList;
 
@@ -29,6 +30,7 @@ import retrofit2.Response;
 public class ProveedoresFragment extends Fragment implements Callback<ArrayList<Proveedores>> {
 
     private FragmentProveedoresBinding binding;
+    AdapterProveedores adapter;
 
     public static ProveedoresFragment newInstance() {
         return new ProveedoresFragment();
@@ -60,7 +62,7 @@ public class ProveedoresFragment extends Fragment implements Callback<ArrayList<
                 String numero_telefono=x.getNumero_telefono();
                 String numero_nit=x.getNumero_nit();
                 String nombre_contacto=x.getNombre_contacto();
-                String telefono_contacto=x.getTelefono_contacto();
+                String telefono_contacto=x.getTelefono_contacto() == null ? "": x.getTelefono_contacto();
                 String estado=x.getEstado();
                 Proveedores proveedor = new Proveedores(idproveedor,
                 codigo_proveedor,
@@ -72,6 +74,8 @@ public class ProveedoresFragment extends Fragment implements Callback<ArrayList<
                 estado);
                 proveedores.add(proveedor);
             });
+            adapter = new AdapterProveedores(proveedores);
+            binding.rvProveedores.setAdapter(adapter);
         }
     }
 

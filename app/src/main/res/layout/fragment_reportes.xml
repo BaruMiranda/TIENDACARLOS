@@ -1,264 +1,281 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorWhite"
     tools:context=".usuarios.ReportesFragment">
 
     <LinearLayout
-        android:id="@+id/ventas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/style_linnear"
-        android:orientation="vertical"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone">
-
-
-        <org.eazegraph.lib.charts.PieChart
-            android:id="@+id/piechart"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginTop="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15"
-            android:padding="6dp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/ventas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/content_inset_5"
+            android:layout_weight="1"
+            android:background="@drawable/style_linnear"
+            android:orientation="vertical"
+            android:padding="@dimen/content_inset_25">
+
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/content_inset_15"
+                android:layout_marginTop="@dimen/content_inset_15"
+                android:layout_marginBottom="@dimen/content_inset_15"
+                android:padding="6dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:layout_gravity="center_vertical">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-                <!--View to display the yellow color icon-->
-                <View
-                    android:layout_width="25dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/R" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical">
 
-                <!--Text view to display R -->
-                <TextView
-                    android:id="@+id/primerDato"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="" />
+                    <!--View to display the yellow color icon-->
+                    <View
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/R" />
+
+                    <!--Text view to display R -->
+                    <TextView
+                        android:id="@+id/primerDato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
-
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/clientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/content_inset_5"
+            android:layout_weight="1"
+            android:background="@drawable/style_linnear"
+            android:orientation="vertical"
+            android:padding="@dimen/content_inset_25">
+
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/content_inset_15"
+                android:layout_marginTop="@dimen/content_inset_15"
+                android:layout_marginBottom="@dimen/content_inset_15"
+                android:padding="6dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_inset_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the green color icon-->
+                    <View
+                        android:layout_width="@dimen/content_inset_25"
+                        android:layout_height="match_parent"
+                        android:background="@color/Python" />
+
+                    <!--Text view to display python text -->
+                    <TextView
+                        android:id="@+id/segundoDato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/clientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/style_linnear"
-        android:orientation="vertical"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone">
-
-
-        <org.eazegraph.lib.charts.PieChart
-            android:id="@+id/piechart2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginTop="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15"
-            android:padding="6dp" />
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
 
         <LinearLayout
+            android:id="@+id/almacen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/content_inset_5"
+            android:layout_weight="1"
+            android:background="@drawable/style_linnear"
+            android:orientation="vertical"
+            android:padding="@dimen/content_inset_25">
+
+
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/content_inset_15"
+                android:layout_marginTop="@dimen/content_inset_15"
+                android:layout_marginBottom="@dimen/content_inset_15"
+                android:padding="6dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/content_inset_25"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-                <!--View to display the green color icon-->
-                <View
-                    android:layout_width="@dimen/content_inset_25"
-                    android:layout_height="match_parent"
-                    android:background="@color/Python" />
 
-                <!--Text view to display python text -->
-                <TextView
-                    android:id="@+id/segundoDato"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="" />
+                <!--Linear layout to display C++-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_inset_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the red color icon-->
+                    <View
+                        android:layout_width="@dimen/content_inset_25"
+                        android:layout_height="match_parent"
+                        android:background="@color/CPP" />
+
+                    <!--Text view to display C++ text -->
+                    <TextView
+                        android:id="@+id/tercerDato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/almacen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/style_linnear"
-        android:orientation="vertical"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone">
-
-
-        <org.eazegraph.lib.charts.PieChart
-            android:id="@+id/piechart3"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginTop="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15"
-            android:padding="6dp" />
-
         <LinearLayout
+            android:id="@+id/empleados"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/content_inset_5"
+            android:background="@drawable/style_linnear"
+            android:orientation="vertical"
+            android:padding="@dimen/content_inset_25">
 
 
-            <!--Linear layout to display C++-->
+            <org.eazegraph.lib.charts.PieChart
+                android:id="@+id/piechart4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="@dimen/content_inset_15"
+                android:layout_marginTop="@dimen/content_inset_15"
+                android:layout_marginBottom="@dimen/content_inset_15"
+                android:padding="6dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/content_inset_25"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
 
-                <!--View to display the red color icon-->
-                <View
-                    android:layout_width="@dimen/content_inset_25"
-                    android:layout_height="match_parent"
-                    android:background="@color/CPP" />
+                <!--Linear layout to display Java-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_inset_25"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
 
-                <!--Text view to display C++ text -->
-                <TextView
-                    android:id="@+id/tercerDato"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="" />
+                    <!--View to display the blue color icon-->
+                    <View
+                        android:layout_width="@dimen/content_inset_25"
+                        android:layout_height="match_parent"
+                        android:background="@color/Java" />
 
+                    <TextView
+                        android:id="@+id/cuartoDato"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/content_inset_25"
+                    android:visibility="gone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <!--View to display the blue color icon-->
+                    <View
+                        android:layout_width="@dimen/content_inset_25"
+                        android:layout_height="match_parent"
+                        android:background="#EF5350" />
+
+                    <TextView
+                        android:id="@+id/cuartoDato2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="" />
+
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/empleados"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/style_linnear"
-        android:orientation="vertical"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone">
-
-
-        <org.eazegraph.lib.charts.PieChart
-            android:id="@+id/piechart4"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginTop="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15"
-            android:padding="6dp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-
-            <!--Linear layout to display Java-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/content_inset_25"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp">
-
-                <!--View to display the blue color icon-->
-                <View
-                    android:layout_width="@dimen/content_inset_25"
-                    android:layout_height="match_parent"
-                    android:background="@color/Java" />
-
-                <TextView
-                    android:id="@+id/cuartoDato"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/content_inset_25"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp">
-
-                <!--View to display the blue color icon-->
-                <View
-                    android:layout_width="@dimen/content_inset_25"
-                    android:layout_height="match_parent"
-                    android:background="#EF5350" />
-
-                <TextView
-                    android:id="@+id/cuartoDato2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/proveedores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/content_inset_10"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone">
+        android:orientation="horizontal"
+        android:padding="@dimen/content_inset_25">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart5"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_width="200dp"
+            android:layout_height="130dp"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginBottom="@dimen/content_inset_15"
             android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_gravity="center"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -273,7 +290,7 @@
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="@color/Java" />
+                    android:background="#004BA0" />
 
                 <TextView
                     android:id="@+id/quintoDato"
@@ -287,6 +304,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/content_inset_25"
+                android:visibility="gone"
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="5dp">
 
@@ -309,4 +327,4 @@
     </LinearLayout>
 
 
-</RelativeLayout>
+</LinearLayout>

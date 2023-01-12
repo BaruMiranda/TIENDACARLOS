@@ -15,6 +15,10 @@
             android:icon="@drawable/ic_home"
             android:title="Clientes" />
         <item
+            android:id="@+id/nav_empresa"
+            android:icon="@drawable/ic_home"
+            android:title="Informacion Empresa" />
+        <item
             android:id="@+id/nav_reportes"
             android:icon="@drawable/ic_home"
             android:title="Reportes" />

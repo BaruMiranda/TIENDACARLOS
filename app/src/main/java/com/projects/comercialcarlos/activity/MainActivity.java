@@ -244,6 +244,9 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
             case R.id.nav_reportes:
                 this.verReportesFragment();
                 break;
+            case R.id.nav_empresa:
+                this.verEmpresaTCFragment();
+                break;
             case R.id.nav_sign_out:
                 this.verMenuInicial(bundle);
                 break;
