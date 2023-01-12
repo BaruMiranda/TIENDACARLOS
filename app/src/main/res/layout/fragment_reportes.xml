@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/colorWhite"
-tools:context=".usuarios.ReportesFragment">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".usuarios.ReportesFragment">
 
     <LinearLayout
         android:id="@+id/ventas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/content_inset_25"
+        android:visibility="gone">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="6dp"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15" />
+            android:layout_marginTop="@dimen/content_inset_15"
+            android:layout_marginBottom="@dimen/content_inset_15"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:orientation="vertical"
             android:gravity="center_vertical"
-            >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,18 +41,17 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="25dp"
                     android:layout_height="match_parent"
-                    android:background="@color/R"/>
+                    android:background="@color/R" />
 
                 <!--Text view to display R -->
                 <TextView
                     android:id="@+id/primerDato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
-
 
 
         </LinearLayout>
@@ -66,27 +62,28 @@ tools:context=".usuarios.ReportesFragment">
         android:id="@+id/clientes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/content_inset_25"
+        android:visibility="gone">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart2"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="6dp"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15" />
+            android:layout_marginTop="@dimen/content_inset_15"
+            android:layout_marginBottom="@dimen/content_inset_15"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/content_inset_25"
@@ -97,15 +94,15 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="@color/Python"/>
+                    android:background="@color/Python" />
 
                 <!--Text view to display python text -->
                 <TextView
                     android:id="@+id/segundoDato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
 
@@ -117,30 +114,27 @@ tools:context=".usuarios.ReportesFragment">
         android:id="@+id/almacen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/content_inset_25"
+        android:visibility="gone">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart3"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="6dp"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15" />
+            android:layout_marginTop="@dimen/content_inset_15"
+            android:layout_marginBottom="@dimen/content_inset_15"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:orientation="vertical"
             android:gravity="center_vertical"
-            >
-
-
+            android:orientation="vertical">
 
 
             <!--Linear layout to display C++-->
@@ -154,15 +148,15 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="@color/CPP"/>
+                    android:background="@color/CPP" />
 
                 <!--Text view to display C++ text -->
                 <TextView
                     android:id="@+id/tercerDato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
 
@@ -174,28 +168,27 @@ tools:context=".usuarios.ReportesFragment">
         android:id="@+id/empleados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/content_inset_25"
+        android:visibility="gone">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart4"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="6dp"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15" />
+            android:layout_marginTop="@dimen/content_inset_15"
+            android:layout_marginBottom="@dimen/content_inset_15"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:orientation="vertical"
             android:gravity="center_vertical"
-            >
+            android:orientation="vertical">
 
             <!--Linear layout to display Java-->
             <LinearLayout
@@ -208,16 +201,17 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="@color/Java"/>
+                    android:background="@color/Java" />
 
                 <TextView
                     android:id="@+id/cuartoDato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/content_inset_25"
@@ -228,13 +222,14 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="#EF5350"/>
+                    android:background="#EF5350" />
+
                 <TextView
                     android:id="@+id/cuartoDato2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
         </LinearLayout>
@@ -245,28 +240,27 @@ tools:context=".usuarios.ReportesFragment">
         android:id="@+id/proveedores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/content_inset_25"
-        android:visibility="gone"
         android:background="@drawable/style_linnear"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/content_inset_25"
+        android:visibility="gone">
 
 
         <org.eazegraph.lib.charts.PieChart
             android:id="@+id/piechart5"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:padding="6dp"
-            android:layout_marginTop="@dimen/content_inset_15"
             android:layout_marginLeft="@dimen/content_inset_15"
-            android:layout_marginBottom="@dimen/content_inset_15" />
+            android:layout_marginTop="@dimen/content_inset_15"
+            android:layout_marginBottom="@dimen/content_inset_15"
+            android:padding="6dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:orientation="vertical"
             android:gravity="center_vertical"
-            >
+            android:orientation="vertical">
 
             <!--Linear layout to display Java-->
             <LinearLayout
@@ -279,16 +273,17 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="@color/Java"/>
+                    android:background="@color/Java" />
 
                 <TextView
                     android:id="@+id/quintoDato"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/content_inset_25"
@@ -299,13 +294,14 @@ tools:context=".usuarios.ReportesFragment">
                 <View
                     android:layout_width="@dimen/content_inset_25"
                     android:layout_height="match_parent"
-                    android:background="#EF5350"/>
+                    android:background="#EF5350" />
+
                 <TextView
                     android:id="@+id/quintoDato2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:text="" />
 
             </LinearLayout>
         </LinearLayout>
