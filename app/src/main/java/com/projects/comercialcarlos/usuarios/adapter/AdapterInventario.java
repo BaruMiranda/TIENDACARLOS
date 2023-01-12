@@ -11,15 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.projects.comercialcarlos.R;
-    import com.projects.comercialcarlos.Retrofit.model.Inventarios;
+import com.projects.comercialcarlos.Retrofit.model.Inventarios;
+import com.projects.comercialcarlos.Retrofit.model.Productos;
 
 import java.util.List;
 
 public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.CPPViewHolder> {
 
-        private List<Inventarios> listaDatos;
+    private List<Inventarios> listaDatos;
 
-        public AdapterInventario(List<Inventarios> listaDatos) {
+    public AdapterInventario(List<Inventarios> listaDatos) {
         this.listaDatos = listaDatos;
     }
 
@@ -40,7 +41,7 @@ public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.CP
         return listaDatos.size();
     }
 
-        public void setItems(List<Inventarios> list) {
+    public void setItems(List<Inventarios> list) {
         this.listaDatos = list;
         notifyDataSetChanged();
     }
@@ -67,13 +68,13 @@ public class AdapterInventario extends RecyclerView.Adapter<AdapterInventario.CP
         }
 
         @SuppressLint("SetTextI18n")
-            public void asignarDatos(Inventarios datos) {
+        public void asignarDatos(Inventarios datos) {
 
-            cod02.setText("Fecha Inventario: " +  datos.getMes_inventario());
-            cod03.setText("Saldo Inicial: " +datos.getSaldo_inicial());
-            cod04.setText("Saldo Final: " +datos.getSaldo_final());
-            cod05.setText("Entrada: " +datos.getEntradas());
-            cod06.setText("Salida: " +datos.getSalidas());
+            cod02.setText("Fecha Inventario: " + datos.getMes_inventario());
+            cod03.setText("Saldo Inicial: " + datos.getSaldo_inicial());
+            cod04.setText("Saldo Final: " + datos.getSaldo_final());
+            cod05.setText("Entrada: " + datos.getEntradas());
+            cod06.setText("Salida: " + datos.getSalidas());
         }
     }
 }
