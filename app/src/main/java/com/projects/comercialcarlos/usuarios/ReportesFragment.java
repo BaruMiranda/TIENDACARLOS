@@ -50,16 +50,16 @@ public class ReportesFragment extends Fragment {
         binding.piechart3.addPieSlice(new PieModel("REPORTE AULAS",75,Color.parseColor("#EF5350")));
         binding.piechart4.addPieSlice(new PieModel("REPORTE GRADOS",6,Color.parseColor("#29B6F6")));
         binding.piechart4.addPieSlice(new PieModel("REPORTE GRADOS",5,Color.parseColor("#EF5350")));
-        binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",34,Color.parseColor("#004BA0")));
-        binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",66,Color.parseColor("#EF5350")));
+        binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",66,Color.parseColor("#004BA0")));
+        binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",34,Color.parseColor("#EF5350")));
 
-        binding.primerDato.setText("Ventas");
-        binding.segundoDato.setText("Almacen");
-        binding.tercerDato.setText("Clientes");
-        binding.cuartoDato.setText("Empleados");
-        binding.cuartoDato2.setText("Provedores");
-        binding.quintoDato.setText("Compras");
-        binding.quintoDato2.setText("Compras");
+        binding.primerDato.setText("%Ventas Mes Actual");
+        binding.segundoDato.setText("%Almacen Prendas");
+        binding.tercerDato.setText("%Clientes");
+        binding.cuartoDato.setText("%Provedores");
+        binding.cuartoDato2.setText("%Provedores");
+        binding.quintoDato.setText("%Compras Mercadera");
+        binding.quintoDato2.setText("Compras Mercadera");
 
 
         binding.piechart.startAnimation();

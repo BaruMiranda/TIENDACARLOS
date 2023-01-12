@@ -88,7 +88,7 @@ public class MenuFragment extends Fragment {
             public void onClick(View view) {
                 if(isValidationUser()&&isValidationPass()){
                     ((InputMethodManager)getActivity().getSystemService(requireActivity().INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(view.getWindowToken(),0);
-                    if("admin".equals(binding.etEmailAuth.getText().toString())&&"admin".equals(binding.etPasswordAuth.getText().toString())){
+                    if("admin".equals(binding.etEmailAuth.getText().toString())&&"admin".equals(binding.etPasswordAuth.getText().toString())||"fernando".equals(binding.etEmailAuth.getText().toString())&&"12345".equals(binding.etPasswordAuth.getText().toString())){
                         ((MainActivity) getActivity()).verEmpresaTCFragment();
                     }else{
                         dialog("Usuario o Password no valido.");

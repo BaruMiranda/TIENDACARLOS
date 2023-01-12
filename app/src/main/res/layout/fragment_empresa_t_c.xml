@@ -120,7 +120,7 @@
 
         <TextView
             android:id="@+id/cod_empresaTrasporte"
-            app:drawableRightCompat="@drawable/ic_arrow_right"
+            app:drawableRightCompat="@drawable/ic_star_drop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/content_inset_5"
@@ -137,8 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/content_inset_10"
-            android:orientation="vertical"
-            android:visibility="gone">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
