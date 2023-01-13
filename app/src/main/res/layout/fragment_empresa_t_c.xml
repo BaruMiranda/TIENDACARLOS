@@ -344,7 +344,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/content_inset_10"
-                android:text="Bueno Fernando" />
+                android:text="Bueno Luis" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -424,7 +424,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/content_inset_10"
-                    android:text="Garcia Gastelo Anthony" />
+                    android:text="RONDO MURGA RAUL" />
             </LinearLayout>
 
         </LinearLayout>

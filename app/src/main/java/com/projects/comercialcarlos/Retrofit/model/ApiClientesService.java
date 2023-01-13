@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface ApiClientesService {
-    @GET("clientes.php")
-    Call<ArrayList<Clientes>> getClientes();
+    @GET("ventas.php")
+    Call<ArrayList<Ventas>> getVentas();
 }

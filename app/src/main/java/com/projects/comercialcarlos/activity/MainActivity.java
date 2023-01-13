@@ -239,7 +239,7 @@ public class MainActivity extends AppCompatActivity implements FragmentService {
                 this.verProveedoresFragment();
                 break;
             case R.id.nav_tipocontrol:
-                this.verClientesFragment();
+                this.verVentasFragment();
                 break;
             case R.id.nav_reportes:
                 this.verReportesFragment();

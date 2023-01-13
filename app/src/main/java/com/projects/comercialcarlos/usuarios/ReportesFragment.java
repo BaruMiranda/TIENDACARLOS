@@ -53,13 +53,13 @@ public class ReportesFragment extends Fragment {
         binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",66,Color.parseColor("#004BA0")));
         binding.piechart5.addPieSlice(new PieModel("REPORTE GRADOS",34,Color.parseColor("#EF5350")));
 
-        binding.primerDato.setText("%Ventas Mes Actual");
-        binding.segundoDato.setText("%Almacen Prendas");
+        binding.primerDato.setText("%Ventas");
+        binding.segundoDato.setText("%Almacen");
         binding.tercerDato.setText("%Clientes");
         binding.cuartoDato.setText("%Provedores");
         binding.cuartoDato2.setText("%Provedores");
-        binding.quintoDato.setText("%Compras Mercadera");
-        binding.quintoDato2.setText("Compras Mercadera");
+        binding.quintoDato.setText("%Mercadera");
+        binding.quintoDato2.setText("Mercadera");
 
 
         binding.piechart.startAnimation();

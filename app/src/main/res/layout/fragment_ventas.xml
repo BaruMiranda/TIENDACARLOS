@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/content_inset_15"
     tools:context=".usuarios.VentasFragment">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LISTADO VENTAS"
+        android:layout_marginBottom="@dimen/content_inset_10"
+        android:gravity="center"
+        android:fontFamily="@font/helvetica_bold"/>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ventass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+</LinearLayout>
