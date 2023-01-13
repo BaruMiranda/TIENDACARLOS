@@ -1,18 +1,24 @@
 package com.projects.comercialcarlos.usuarios.adapter;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.projects.comercialcarlos.R;
 import com.projects.comercialcarlos.Retrofit.model.Ventas;
+import com.projects.comercialcarlos.util.Constantes;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class AdapterVentas extends RecyclerView.Adapter<AdapterVentas.CPPViewHolder> {
 
@@ -21,6 +27,7 @@ public class AdapterVentas extends RecyclerView.Adapter<AdapterVentas.CPPViewHol
     public AdapterVentas(List<Ventas> listaDatos) {
         this.listaDatos = listaDatos;
     }
+
 
     @NonNull
     @Override
@@ -37,6 +44,18 @@ public class AdapterVentas extends RecyclerView.Adapter<AdapterVentas.CPPViewHol
     @Override
     public int getItemCount() {
         return listaDatos.size();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public void sortedFilterPlaca(String query) {
+        if ("".equals(query)){
+            this.listaDatos =  Constantes.getLstPciCarga;
+            notifyDataSetChanged();
+        } else {
+            this.listaDatos = Constantes.getpciList;
+            this.listaDatos = Constantes.getLstPciCarga.stream().filter(x-> (x.getFecha_venta()).toUpperCase().contains(query.toUpperCase())).collect(Collectors.toList());
+            notifyDataSetChanged();
+        }
     }
 
     public void setItems(List<Ventas> list) {

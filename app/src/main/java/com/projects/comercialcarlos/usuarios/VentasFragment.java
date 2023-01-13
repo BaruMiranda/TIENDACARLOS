@@ -1,14 +1,20 @@
 package com.projects.comercialcarlos.usuarios;
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -21,6 +27,7 @@ import com.projects.comercialcarlos.databinding.FragmentBandejaBinding;
 import com.projects.comercialcarlos.databinding.FragmentVentasBinding;
 import com.projects.comercialcarlos.usuarios.adapter.AdapterProveedores;
 import com.projects.comercialcarlos.usuarios.adapter.AdapterVentas;
+import com.projects.comercialcarlos.util.Constantes;
 
 import java.util.ArrayList;
 
@@ -32,8 +39,16 @@ public class VentasFragment extends Fragment implements Callback<ArrayList<Venta
 
     private FragmentVentasBinding binding;
     AdapterVentas adapter;
+    private SearchView searchView;
+
     public static VentasFragment newInstance() {
         return new VentasFragment();
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -99,6 +114,8 @@ public class VentasFragment extends Fragment implements Callback<ArrayList<Venta
                     idusuario);
             inventarios.add(inventarios1);
         });
+        Constantes.getpciList = inventarios;
+        Constantes.getLstPciCarga = inventarios;
         adapter = new AdapterVentas(inventarios);
         binding.ventass.setAdapter(adapter);
     }
@@ -106,5 +123,36 @@ public class VentasFragment extends Fragment implements Callback<ArrayList<Venta
     @Override
     public void onFailure(Call<ArrayList<Ventas>> call, Throwable t) {
 
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.clear();
+        inflater.inflate(R.menu.menu_search, menu);
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        searchView.setQueryHint(Constantes.HINT_BUSCAR);
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getActivity().getComponentName()));
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                FiltrarPorDatos(searchView.getQuery().toString());
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String query) {
+                FiltrarPorDatos(searchView.getQuery().toString());
+                return false;
+            }
+        });
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public boolean FiltrarPorDatos(String query){
+        adapter.sortedFilterPlaca(query);
+        return false;
     }
 }
